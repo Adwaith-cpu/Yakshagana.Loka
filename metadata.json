@@ -1,0 +1,12 @@
+{
+  "name": "Yakshagana-Loka",
+  "description": "A digital stage for Yakshagana featuring performance tracking, an artist encyclopedia, and Talamaddale radio.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "real-time synchronization",
+    "media playback",
+    "artist directory"
+  ]
+}

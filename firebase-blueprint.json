@@ -1,0 +1,79 @@
+{
+  "entities": {
+    "Artist": {
+      "title": "Artist",
+      "description": "Information about a Yakshagana artist",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Full name of the artist" },
+        "category": { "type": "string", "enum": ["Bhagavatha", "Actor", "Maddalegara"], "description": "Artist expertise" },
+        "bio": { "type": "string", "description": "Biography and history" },
+        "veshas": { "type": "array", "description": "List of iconic roles (galleries)", "items": { "type": "string" } },
+        "imageUrl": { "type": "string", "description": "Profile picture URL" }
+      },
+      "required": ["name", "category"]
+    },
+    "Show": {
+      "title": "Show",
+      "description": "A scheduled Yakshagana performance",
+      "type": "object",
+      "properties": {
+        "melaName": { "type": "string", "description": "Name of the troupe" },
+        "date": { "type": "string", "format": "date-time", "description": "When the show happens" },
+        "location": { "type": "string", "description": "Village or town name" },
+        "address": { "type": "string", "description": "Specific venue address" },
+        "coordinates": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          }
+        },
+        "description": { "type": "string", "description": "Special notes or Prasanga name" }
+      },
+      "required": ["melaName", "date", "location"]
+    },
+    "AudioClip": {
+      "title": "AudioClip",
+      "description": "Talamaddale audio clip for the radio module",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "prasanga": { "type": "string", "description": "The play/story name" },
+        "artists": { "type": "array", "items": { "type": "string" } },
+        "audioUrl": { "type": "string" },
+        "duration": { "type": "number", "description": "Duration in seconds" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "audioUrl"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile and role management",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "manager", "user"] }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "artists": {
+      "schema": "Artist",
+      "description": "Collection of artist profiles"
+    },
+    "shows": {
+      "schema": "Show",
+      "description": "Scheduled performances across coastal Karnataka"
+    },
+    "audio_clips": {
+      "schema": "AudioClip",
+      "description": "Archived Talamaddale songs and dialogues"
+    },
+    "users": {
+      "schema": "User",
+      "description": "User profiles and roles"
+    }
+  }
+}

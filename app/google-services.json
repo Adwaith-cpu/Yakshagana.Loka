@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "764962646627",
+    "project_id": "yakshaganaloka-96609",
+    "storage_bucket": "yakshaganaloka-96609.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764962646627:android:2d16ba1f92efc23d30e656",
+        "android_client_info": {
+          "package_name": "com.yakshaganaloka.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764962646627-ni1uo165h619f2q7qibell9jun8g6qdt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yakshaganaloka.app",
+            "certificate_hash": "89f01395b88218689609dd5fe2f895d575b7042d"
+          }
+        },
+        {
+          "client_id": "764962646627-0h7jdo35d6a7ub2cs707ih63ka9caltt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSRFrfyGa3l9ZngORUSSco269DOuf3lrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764962646627-0h7jdo35d6a7ub2cs707ih63ka9caltt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
